@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     machine: true
-    
+
     steps:
       - checkout
 
@@ -21,15 +21,15 @@ jobs:
       - run:
           name: Run the following SQL configuration scripts
           command: |
-            echo "CREATE USER pactbrokeruser WITH PASSWORD 'TheUserPassword';" 
-            echo "CREATE DATABASE pactbroker WITH OWNER pactbrokeruser;"
-            echo "GRANT ALL PRIVILEGES ON DATABASE pactbroker TO pactbrokeruser;"
+            echo "CREATE USER pactbrokeruser WITH PASSWORD 'TheUserPasswordNew';" 
+            echo "CREATE DATABASE pactbroker WITH OWNER pactbrokerusernew;"
+            echo "GRANT ALL PRIVILEGES ON DATABASE pactbroker TO pactbrokerusernew;"
 
       - run:
           name: Start the PactBroker container
           command: |
             set -x
-            docker run --name pactbroker --link pactbroker-db:postgres -e PACT_BROKER_DATABASE_USERNAME=pactbrokeruser -e PACT_BROKER_DATABASE_PASSWORD=TheUserPassword -e PACT_BROKER_DATABASE_HOST=postgres -e PACT_BROKER_DATABASE_NAME=pactbroker -d -p 80:80 dius/pact-broker
+            docker run --name pactbroker --link pactbroker-ci:postgres -e PACT_BROKER_DATABASE_USERNAME=pactbrokerusernew -e PACT_BROKER_DATABASE_PASSWORD=TheUserPasswordNew -e PACT_BROKER_DATABASE_HOST=postgres -e PACT_BROKER_DATABASE_NAME=pactbroker -d -p 80:80 dius/pact-broker
 
 
       - run: 
