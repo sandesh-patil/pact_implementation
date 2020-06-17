@@ -1,0 +1,5 @@
+POSTGRES_USER=some-postgres
+POSTGRES_PASSWORD=mysecretpassword
+PACT_BROKER_URL=localhost:80
+PACT_BROKER_TOKEN=TheUserPassword
+

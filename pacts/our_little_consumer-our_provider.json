@@ -1,0 +1,94 @@
+{
+  "consumer": {
+    "name": "Our Little Consumer"
+  },
+  "provider": {
+    "name": "Our Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for names",
+      "providerState": "empty",
+      "request": {
+        "method": "GET",
+        "path": "/names"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+
+        ]
+      }
+    },
+    {
+      "description": "a request for names",
+      "providerState": "Shima",
+      "request": {
+        "method": "GET",
+        "path": "/names"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "id": 0,
+            "first": "Shima"
+          }
+        ]
+      }
+    },
+    {
+      "description": "a request to create a name",
+      "providerState": "empty",
+      "request": {
+        "method": "POST",
+        "path": "/names",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "first": "Shima"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": 0,
+          "first": "Shima"
+        }
+      }
+    },
+    {
+      "description": "a request to delete a name",
+      "providerState": "Shima",
+      "request": {
+        "method": "DELETE",
+        "path": "/names/0"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": 0,
+          "first": "Shima"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

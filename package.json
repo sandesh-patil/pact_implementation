@@ -1,0 +1,28 @@
+{
+  "name": "pact-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:pact:consumer": "./node_modules/.bin/mocha --timeout 10000 consumer/test/consumer.spec.js",
+    "test:pact:provider": "./node_modules/.bin/mocha --timeout 10000 provider/test/provider.spec.js",
+    "publish:pact": "pact-broker publish ./pacts --consumer-app-version 1.0.0 --broker-base-url http://localhost:80 --broker-token $PACT_BROKER_TOKEN",
+    "create:provider:tag": "pact-broker create-version-tag --pacticipant Provider --version 1.0.0 --tag staging --broker-base-url http://localhost:80",
+    "create:consumer:tag": "pact-broker create-version-tag --pacticipant Consumer --version 1.0.0 --tag staging --broker-base-url http://localhost:80",
+    "can:i:deploy:consumer": "pact-broker can-i-deploy --pacticipant Consumer --version 1.0.0 --pacticipant Provider --latest staging --broker-base-url http://localhost:80"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "superagent": "^5.2.2"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^9.11.0",
+    "chai": "^4.2.0",
+    "chai-arrays": "^2.0.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^7.2.0"
+  }
+}
