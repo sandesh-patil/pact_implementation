@@ -1,11 +1,10 @@
 version: 2.1
 jobs:
   build:
-    machine: true
-
+    docker:
+      - image: circleci/node:latest
     steps:
       - checkout
-
       - run:
           name: Start the PostgreSQL container
           command: |
