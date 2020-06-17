@@ -5,11 +5,6 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-
-     - run:
-          name: Install Docker client
-          command: apk add docker-cli    
-
       - run:
           name: Start the PostgreSQL container
           command: |

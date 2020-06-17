@@ -40,13 +40,13 @@ services:
   #     - "8443:443"
   #     - "80:80"
 
-  can-i-deploy:
-    image: pactfoundation/pact-cli
-    depends_on:
-      - pact-broker-with-ngnix
-    environment:
-      PACT_BROKER_BASE_URL: https://pact-broker-with-ngnix:443
-      SSL_CERT_FILE: /tmp/nginx-selfsigned.crt
-    volumes:
-      - ${PWD}/ssl/nginx-selfsigned.crt:/tmp/nginx-selfsigned.crt
-    command: broker can-i-deploy --pacticipant "Example App" --latest
+  # can-i-deploy:
+  #   image: pactfoundation/pact-cli
+  #   depends_on:
+  #     - pact-broker-with-ngnix
+  #   environment:
+  #     PACT_BROKER_BASE_URL: https://pact-broker-with-ngnix:443
+  #     SSL_CERT_FILE: /tmp/nginx-selfsigned.crt
+  #   volumes:
+  #     - ${PWD}/ssl/nginx-selfsigned.crt:/tmp/nginx-selfsigned.crt
+  #   command: broker can-i-deploy --pacticipant "Example App" --latest
