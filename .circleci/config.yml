@@ -7,8 +7,6 @@ jobs:
     steps:
       - checkout
 
-       - setup_remote_docker:
-          docker_layer_caching: true
 
   - run: |
           TAG=0.1.$CIRCLE_BUILD_NUM
@@ -17,8 +15,6 @@ jobs:
           docker push CircleCI-Public/circleci-demo-docker:$TAG
 
 
-   - setup_remote_docker:
-          version: 19.03.8-ce
 
      - run:
           name: Install Docker client
