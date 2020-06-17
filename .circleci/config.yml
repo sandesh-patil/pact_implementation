@@ -32,7 +32,7 @@ jobs:
 
       - run: 
           name: Install project dependencies
-          command: npm install --no-optional
+          command: npm install -f
       - run:
           name: Run consumer contract tests
           command: npm run test:pact:consumer
