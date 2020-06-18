@@ -16,7 +16,7 @@ jobs:
           name: Connect to the container and execute psql
           command: |
             set -x
-            docker run -it --link pactbroker-db:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U newuser -U newpassword'
+            docker run -it --link pactbroker-db:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U newuser -e newpassword'
 
       - run:
           name: Run the following SQL configuration scripts
