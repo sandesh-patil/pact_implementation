@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-      environment:
-        POSTGRES_HOST_AUTH_METHOD: trust
+        environment:
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       - checkout
       - setup_remote_docker
