@@ -15,7 +15,7 @@ server.post('/setup', (req, res) => {
         case 'Shima':
             dataStore.names = [{
                 id: 0,
-                first: 'Shima',
+                first: 'Shima riz',
             }];
             break
         // default:

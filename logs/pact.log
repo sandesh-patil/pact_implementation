@@ -1,5 +1,5 @@
-I, [2020-06-18T07:47:38.485393 #43025]  INFO -- : Registered expected interaction GET /names
-D, [2020-06-18T07:47:38.485607 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.670200 #57611]  INFO -- : Registered expected interaction GET /names
+D, [2020-06-18T11:07:53.670426 #57611] DEBUG -- : {
   "description": "a request for names",
   "providerState": "empty",
   "request": {
@@ -17,8 +17,8 @@ D, [2020-06-18T07:47:38.485607 #43025] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-06-18T07:47:38.493024 #43025]  INFO -- : Received request GET /names
-D, [2020-06-18T07:47:38.493101 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.681550 #57611]  INFO -- : Received request GET /names
+D, [2020-06-18T11:07:53.681784 #57611] DEBUG -- : {
   "path": "/names",
   "query": "",
   "method": "get",
@@ -29,8 +29,8 @@ D, [2020-06-18T07:47:38.493101 #43025] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-06-18T07:47:38.493356 #43025]  INFO -- : Found matching response for GET /names
-D, [2020-06-18T07:47:38.493421 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.682121 #57611]  INFO -- : Found matching response for GET /names
+D, [2020-06-18T11:07:53.682225 #57611] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -39,10 +39,10 @@ D, [2020-06-18T07:47:38.493421 #43025] DEBUG -- : {
 
   ]
 }
-I, [2020-06-18T07:47:38.502532 #43025]  INFO -- : Verifying - interactions matched
-I, [2020-06-18T07:47:38.506221 #43025]  INFO -- : Cleared interactions
-I, [2020-06-18T07:47:38.512904 #43025]  INFO -- : Registered expected interaction GET /names
-D, [2020-06-18T07:47:38.513024 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.690002 #57611]  INFO -- : Verifying - interactions matched
+I, [2020-06-18T11:07:53.693334 #57611]  INFO -- : Cleared interactions
+I, [2020-06-18T11:07:53.697796 #57611]  INFO -- : Registered expected interaction GET /names
+D, [2020-06-18T11:07:53.697901 #57611] DEBUG -- : {
   "description": "a request for names",
   "providerState": "Shima",
   "request": {
@@ -63,8 +63,8 @@ D, [2020-06-18T07:47:38.513024 #43025] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-06-18T07:47:38.517911 #43025]  INFO -- : Received request GET /names
-D, [2020-06-18T07:47:38.518002 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.702658 #57611]  INFO -- : Received request GET /names
+D, [2020-06-18T11:07:53.702924 #57611] DEBUG -- : {
   "path": "/names",
   "query": "",
   "method": "get",
@@ -75,8 +75,8 @@ D, [2020-06-18T07:47:38.518002 #43025] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-06-18T07:47:38.518133 #43025]  INFO -- : Found matching response for GET /names
-D, [2020-06-18T07:47:38.518187 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.703136 #57611]  INFO -- : Found matching response for GET /names
+D, [2020-06-18T11:07:53.703230 #57611] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -88,10 +88,10 @@ D, [2020-06-18T07:47:38.518187 #43025] DEBUG -- : {
     }
   ]
 }
-I, [2020-06-18T07:47:38.522371 #43025]  INFO -- : Verifying - interactions matched
-I, [2020-06-18T07:47:38.525486 #43025]  INFO -- : Cleared interactions
-I, [2020-06-18T07:47:38.529757 #43025]  INFO -- : Registered expected interaction POST /names
-D, [2020-06-18T07:47:38.529938 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.708497 #57611]  INFO -- : Verifying - interactions matched
+I, [2020-06-18T11:07:53.712271 #57611]  INFO -- : Cleared interactions
+I, [2020-06-18T11:07:53.720094 #57611]  INFO -- : Registered expected interaction POST /names
+D, [2020-06-18T11:07:53.720230 #57611] DEBUG -- : {
   "description": "a request to create a name",
   "providerState": "empty",
   "request": {
@@ -116,8 +116,8 @@ D, [2020-06-18T07:47:38.529938 #43025] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-06-18T07:47:38.536258 #43025]  INFO -- : Received request POST /names
-D, [2020-06-18T07:47:38.536394 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.726631 #57611]  INFO -- : Received request POST /names
+D, [2020-06-18T11:07:53.726757 #57611] DEBUG -- : {
   "path": "/names",
   "query": "",
   "method": "post",
@@ -133,8 +133,8 @@ D, [2020-06-18T07:47:38.536394 #43025] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-06-18T07:47:38.536557 #43025]  INFO -- : Found matching response for POST /names
-D, [2020-06-18T07:47:38.536633 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.726989 #57611]  INFO -- : Found matching response for POST /names
+D, [2020-06-18T11:07:53.727057 #57611] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -144,10 +144,10 @@ D, [2020-06-18T07:47:38.536633 #43025] DEBUG -- : {
     "first": "Shima"
   }
 }
-I, [2020-06-18T07:47:38.541134 #43025]  INFO -- : Verifying - interactions matched
-I, [2020-06-18T07:47:38.545109 #43025]  INFO -- : Cleared interactions
-I, [2020-06-18T07:47:38.550899 #43025]  INFO -- : Registered expected interaction DELETE /names/0
-D, [2020-06-18T07:47:38.551026 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.732248 #57611]  INFO -- : Verifying - interactions matched
+I, [2020-06-18T11:07:53.737322 #57611]  INFO -- : Cleared interactions
+I, [2020-06-18T11:07:53.755460 #57611]  INFO -- : Registered expected interaction DELETE /names/0
+D, [2020-06-18T11:07:53.755660 #57611] DEBUG -- : {
   "description": "a request to delete a name",
   "providerState": "Shima",
   "request": {
@@ -166,8 +166,8 @@ D, [2020-06-18T07:47:38.551026 #43025] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-06-18T07:47:38.555150 #43025]  INFO -- : Received request DELETE /names/0
-D, [2020-06-18T07:47:38.555266 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.760906 #57611]  INFO -- : Received request DELETE /names/0
+D, [2020-06-18T11:07:53.761115 #57611] DEBUG -- : {
   "path": "/names/0",
   "query": "",
   "method": "delete",
@@ -178,8 +178,8 @@ D, [2020-06-18T07:47:38.555266 #43025] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-06-18T07:47:38.555376 #43025]  INFO -- : Found matching response for DELETE /names/0
-D, [2020-06-18T07:47:38.555428 #43025] DEBUG -- : {
+I, [2020-06-18T11:07:53.761314 #57611]  INFO -- : Found matching response for DELETE /names/0
+D, [2020-06-18T11:07:53.761399 #57611] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -189,6 +189,6 @@ D, [2020-06-18T07:47:38.555428 #43025] DEBUG -- : {
     "first": "Shima"
   }
 }
-I, [2020-06-18T07:47:38.559251 #43025]  INFO -- : Verifying - interactions matched
-I, [2020-06-18T07:47:38.563015 #43025]  INFO -- : Cleared interactions
-I, [2020-06-18T07:47:38.567410 #43025]  INFO -- : Writing pact for Our Provider to /Users/sp100224/pact_implementation/pacts/our_little_consumer-our_provider.json
+I, [2020-06-18T11:07:53.767097 #57611]  INFO -- : Verifying - interactions matched
+I, [2020-06-18T11:07:53.773846 #57611]  INFO -- : Cleared interactions
+I, [2020-06-18T11:07:53.781520 #57611]  INFO -- : Writing pact for Our Provider to /Users/sp100224/pact_implementation/pacts/our_little_consumer-our_provider.json
