@@ -1,8 +1,7 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: circleci/node:latest
+    machine: true
     steps:
       - checkout
       - setup_remote_docker
@@ -16,7 +15,6 @@ jobs:
           name: Connect to the container and execute psql
           command: |
             set -x
-            echo "dockerize -wait tcp://db:5432 -wait http://web:80 -timeout 10s"
             docker run -it --link pactbroker-db:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U newuser'
 
       - run:
