@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
+      environment:
+        POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       - checkout
       - setup_remote_docker
@@ -15,7 +17,7 @@ jobs:
       - run:
           name: Connect to the container and execute psql
           command: |
-           sudo docker run -it --link pactbroker-db:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U newuser'
+            docker run -it --link pactbroker-db:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U newuser'
 
       - run:
           name: Run the following SQL configuration scripts
