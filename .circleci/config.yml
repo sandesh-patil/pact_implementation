@@ -3,8 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-        environment:
-          POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       - checkout
       - setup_remote_docker
@@ -13,6 +11,12 @@ jobs:
           command: |
             set -x
             docker run --name pactbroker-db -e POSTGRES_PASSWORD=newpassword -e POSTGRES_USER=newuser -d postgres
+
+      - run:
+          name: Start the PactBroker container
+          command: |
+            set -x
+            docker run --name pactbroker --link pactbroker-db:postgres -e PACT_BROKER_DATABASE_USERNAME=pactbrokeruser -e PACT_BROKER_DATABASE_PASSWORD=TheUserPassword -e PACT_BROKER_DATABASE_HOST=postgres -e PACT_BROKER_DATABASE_NAME=pactbroker -d -p 80:80 dius/pact-broker
 
       - run:
           name: Connect to the container and execute psql
@@ -26,11 +30,6 @@ jobs:
             echo "CREATE DATABASE pactbroker WITH OWNER pactbrokerusernew;"
             echo "GRANT ALL PRIVILEGES ON DATABASE pactbroker TO pactbrokerusernew;"
 
-      - run:
-          name: Start the PactBroker container
-          command: |
-            set -x
-            docker run --name pactbroker --link pactbroker-db:postgres -e PACT_BROKER_DATABASE_USERNAME=pactbrokeruser -e PACT_BROKER_DATABASE_PASSWORD=TheUserPassword -e PACT_BROKER_DATABASE_HOST=postgres -e PACT_BROKER_DATABASE_NAME=pactbroker -d -p 80:80 dius/pact-broker
 
       - run: 
           name: Install project dependencies
